@@ -49,6 +49,10 @@ MIDDLEWARE = [
     # 'middleware.auth_middleware.AuthMiddleWare',  # 登录中间件(可选)
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
+XS_SHARING_ALLOWED_METHODS = ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE']
+
 ROOT_URLCONF = 'authentication_system.urls'
 
 TEMPLATES = [

@@ -69,7 +69,7 @@
                 </li>
                 <li class="layui-nav-item" lay-unselect>
                     <a href="javascript:;">
-                        <cite>贤心</cite>
+                        <cite>{{ username }}</cite>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a lay-href="set/user/info.html">基本资料</a></dd>
@@ -472,7 +472,7 @@
         <!-- 主体内容 -->
         <div class="layui-body" id="LAY_app_body">
             <div class="layadmin-tabsbody-item layui-show">
-                <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+                <iframe src="{% url 'home' %}" frameborder="0" class="layadmin-iframe"></iframe>
             </div>
         </div>
 
@@ -485,7 +485,7 @@
 <script src="{% static '/lib/layuiadmin/layui/layui.js' %}"></script>
 <script>
     layui.config({
-        base: '/static/lib/layuiadmin/' //静态资源所在路径
+        base: "{% static '/lib/layuiadmin/' %}" //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
     }).use('index');

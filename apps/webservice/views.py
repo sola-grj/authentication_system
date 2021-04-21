@@ -18,6 +18,13 @@ def view_index(request):
     return render(request, 'web_app/index.html', {'username': username if username else '未登录'})
 
 
+@login_required(login_url='/login/')
+def view_home(request):
+    """home"""
+    username = request.user.username
+    return render(request, 'web_app/home/console.html', {'username': username if username else '未登录'})
+
+
 def view_login(request):
     """登录"""
     if request.method == 'GET':

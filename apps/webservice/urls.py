@@ -7,6 +7,7 @@ from apps.webservice import views
 
 urlpatterns = [
     re_path('^index/$', views.view_index, name='index'),
+    re_path('^home/console/$', views.view_home, name='home'),
     re_path('^login/$', views.view_login, name='login'),
     re_path('^register/$', views.view_register, name='register'),
     re_path('^logout/$', views.view_logout, name='logout'),
